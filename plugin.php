@@ -70,7 +70,6 @@ add_action('manage_posts_custom_column', function ($column, $post_id) {
 // add shortcode
 add_action('init', function () {
     add_shortcode('liturgia', function ($atts = [], $content = null) {
-        wp_ewangelia_pull();
         ob_start();
         require(plugin_dir_path(__FILE__) . 'liturgy_view.php');
         $content = ob_get_clean();
