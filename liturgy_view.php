@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 ?>
-<p style="text-align: right;"><?php echo date('l, j F Y'); ?></p>
+<p style="text-align: right;"><?php echo date_i18n(get_option('date_format')); ?></p>
 <h2>Pierwsze Czytanie</h2>
 <?php
 $query = new WP_Query(
